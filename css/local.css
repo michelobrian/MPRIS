@@ -50,6 +50,10 @@ menu {
     margin-left: -1%;
     margin-right: -1%;
     font-weight: bold;
+    text-decoration: none;
+}
+menu ul {
+    text-decoration: none;
 }
 
 .options{

@@ -30,5 +30,12 @@
                     </ul>
                 </nav>
                 <div class="title">
-            <h1 style="text-align: left; padding-left: 12%;"> Marriages</h1>
+            <h1 style="text-align: left; padding-left: 12%;"> Fees and Charges</h1>
             </div>
+        
+        </body>
+        <footer style="background-color:rgb(6, 0, 0); color: white;  padding: 10px; bottom: 0; width: 100%;">
+            <p style="text-align: center;">&copy; 2023 Municipal Public Records System. All rights reserved.</p>
+            <p style="padding-left:30%;">Developed by:  Brian Michelo    <a href="https://github.com/michelobrian" target="_blank">GitHub</a></p>
+            <p style="padding-left:30%;">Contact:  0977 273121  <br> Email: michelobrian88@gmail.com</p>
+        </footer>

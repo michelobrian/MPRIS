@@ -4,20 +4,39 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>Municipal Public Records</title>
-            <link rel="icon" type="image" href="Images/Mongu Council Logo.png">
+            <link rel="icon" type="image" href="Images/court of arms.png">
             <link rel="stylesheet" href="css/local.css">
+            <style>
+                header {
+                    background-image: url('Images/landing1.jpg');
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    min-height: 900px;
+                    margin-left: -2%;
+                    margin-right: -2%;
+                
+                }
+            </style>
         </head>
-        <body><!--http://mrwallpapers.com/wp-content/uploads/2018/10/wall-leaves-wooden-background-images-hd.jpg-->
-            <div class="head_images">
-                <img src="Images/court of arms.png" width="60px" height="60px" padding-right="5px">
-                <img src="Images/Mongu Council Logo.png" width="60px" height="60px">
-            </div>
-            
-                <menu>
+        <body>
+            <header>
+                <nav class="sidebar">
                     <ul>
-                        <li><a href="index.html">Records Home</a></li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li> Payments</li>
-                        <li><a href="login.php">LogIn</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="payments.php">Payments</a></li>
+                        <li><a href="login.php">Employee LogIn</a></li>
                     </ul>
+                </nav>
+                <div class="title">
+            <h1 style="text-align: left; padding-left: 12%;"> Death Records and Burial Permits</h1>
+            </div>
+
+
+                </body>
+        <footer style="background-color:rgb(6, 0, 0); color: white;  padding: 10px; bottom: 0; width: 100%;">
+            <p style="text-align: center;">&copy; 2023 Municipal Public Records System. All rights reserved.</p>
+            <p style="padding-left:30%;">Developed by:  Brian Michelo    <a href="https://github.com/michelobrian" target="_blank">GitHub</a></p>
+            <p style="padding-left:30%;">Contact:  0977 273121  <br> Email: michelobrian88@gmail.com</p>
+        </footer>

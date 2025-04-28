@@ -18,15 +18,14 @@
                 <img src="Images/Mongu Council Logo.png" width="60px" height="60px">
             </div>
             
-                <menu>
+			<nav class="sidebar">
                     <ul>
-                        <li><a href="index.html">Records Home</a></li>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li> Payments</li>
-                        <li><a href="login.php">LogIn</a></li>
+                        <li><a href="index.php">Home</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="payments.php">Payments</a></li>
+                        <li><a href="login.php">Employee LogIn</a></li>
                     </ul>
-                </menu>
+                </nav>
                 <body><!--http://mrwallpapers.com/wp-content/uploads/2018/10/wall-leaves-wooden-background-images-hd.jpg-->
 <div>
 <div class="form" id="login">

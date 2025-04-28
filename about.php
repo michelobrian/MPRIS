@@ -30,5 +30,5 @@
                     </ul>
                 </nav>
                 <div class="title">
-            <h1 style="text-align: left; padding-left: 12%;"> Marriages</h1>
+            <h1 style="text-align: left; padding-left: 12%;"> About</h1>
             </div>

@@ -12,7 +12,7 @@
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
-                    min-height: 700px;
+                    min-height: 750px;
                     margin-left: -2%;
                     margin-right: -2%;
                 
@@ -21,7 +21,7 @@
         </head>
         <body>
             <header>
-                <nav>
+                <nav style="margin-top: -8px;">
                     <ul>
                         <li><a href="index.html">Records Home</a></li>
                         <li>About</li>
@@ -40,7 +40,7 @@
                     control of animals.
                 </p>
 
-                <div class="options" style="border-radius: 25px; margin-top: 10px; padding-top: 8%;">
+                <div class="options" style="border-radius: 40px; margin-top: 10px; padding-top: 8%;">
                     <h3> SELECT SERVICE</h3>
                     <button onclick="location.href='marriages.html'">Marriage Records</button>
                     <button onclick="location.href='births.html'"> Birth Records</button>

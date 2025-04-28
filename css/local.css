@@ -1,5 +1,9 @@
 body {
-    background-color: aliceblue;
+    background-image: url('CSS/bg_img1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 .head_images {
     text-align: center;
@@ -11,14 +15,15 @@ body {
     padding-top: 01%;
     padding-bottom: 01%;
 }
- .pg_title{
+.pg_title{
     max-width: 60%;
     margin: auto;
- }
+    
+}
 
 .pg_title h1 {
     text-align: center;
-    color: rgb(255, 81, 0);
+    color: rgb(255, 255, 255);
     margin-top: 0%;
     margin-bottom: 0%;
 }
@@ -31,8 +36,9 @@ body {
     text-align: justify;
     font-family: system-ui;
     margin-bottom: 4%;
+    padding-left: 40%;
 }
-menu li {
+nav li {
     position: relative;
     display: inline-block;
     text-decoration: none;
@@ -42,7 +48,7 @@ menu li {
     padding-right: 2%;
     text-decoration: none;
 }
-menu {
+nav {
     text-align: center;
     color: white;
     background-color: darkgreen;
@@ -52,8 +58,9 @@ menu {
     margin-right: -1%;
     font-weight: bold;
     text-decoration: none;
+    margin-top: -2%;
 }
-menu ul {
+nav ul {
     text-decoration: none;
 }
 
@@ -62,8 +69,8 @@ menu ul {
     background-color: coral;
     text-align: center;
     padding-bottom: 10%;
-    border-radius: 1%;
-    margin-top: 3%;
+    border-radius: 25px;
+    margin-top: 10%;
 }
 
 .options h3 {

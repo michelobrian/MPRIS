@@ -4,6 +4,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
+    font-family: poppins;
 }
 .head_images {
     text-align: center;
@@ -16,27 +17,30 @@ body {
     padding-bottom: 01%;
 }
 .pg_title{
-    max-width: 60%;
+    max-width: 70%;
     margin: auto;
     
 }
 
 .pg_title h1 {
     text-align: center;
-    color: rgb(255, 255, 255);
+    color: rgb(134, 125, 125);
     margin-top: 0%;
-    margin-bottom: 0%;
+    margin-bottom: 0%; 
+    text-shadow:  0.5px 0.5px 0.5px rgb(3, 1, 1);
 }
 .pg_title h3 {
     text-align: center;
     color: forestgreen;
     margin-top: 0%;
+    font-size: x-large;
 }
 .pg_title p {
     text-align: justify;
     font-family: system-ui;
     margin-bottom: 4%;
-    padding-left: 40%;
+    padding-left: 0%;
+    font-size: 1.1em;
 }
 nav li {
     position: relative;
@@ -66,13 +70,21 @@ nav ul {
 
 .options{
     max-width: 100%;
-    background-color: rgba(186, 107, 78, 0.707);
     text-align: center;
     padding-bottom: 10%;
     border-radius: 25px;
     margin-top: 10%;
+    background: rgba(255, 255, 255, 0.38);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-color: rgb(255, 255, 255);
 }
 
 .options h3 {
     color: white;
+    font-weight: bold;
+    font-family: poppins;
 }

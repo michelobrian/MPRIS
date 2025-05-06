@@ -56,10 +56,10 @@
     					printf("Connect failed: %s\n", mysqli_connect_error());
     					exit();
 					}
-					mysqli_select_db($link,"test_db");
-					$results=mysqli_query($link,"select * from usertable where Username='$username' and Password='$password'") or die("failed to connect".mysqli_connect_error());
+					mysqli_select_db($link,"mpris_db");
+					$results=mysqli_query($link,"select * from users where Username='$Username' and Password='$password'") or die("failed to connect".mysqli_connect_error());
 					$row=mysqli_fetch_array($results);
-					if ($row['Username'] == $username && $row['Password'] == $password) {
+					if ($row['Username'] == $username && $row['Password'] == $Password) {
 						header("location: http://localhost/project/home.php");
 						$_SESSION['username'] = $username;
 						$_SESSION['mes'] = "true";

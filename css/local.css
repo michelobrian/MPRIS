@@ -24,6 +24,13 @@ body {
     color: white;
     margin-top: -1%;
 }
+
+.title h1 {
+    font-size: 2.5em;
+    text-shadow: 0.5px 0.5px 0.5px rgb(3, 1, 1);
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 .pg_title{
     max-width: 70%;
     margin: auto;
@@ -44,6 +51,8 @@ body {
     color: forestgreen;
     margin-top: 0%;
     font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 15px;
 }
 .pg_title p {
     text-align: justify;
@@ -51,15 +60,25 @@ body {
     margin-bottom: 4%;
     font-size: 1.1em;
 }
+
+.text {
+    background-color: #4b4b4ba9;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: white;
+    border-radius: 25px;
+}
 .sidebar {
-    width: 130px;
+    width: 110px;
     background-color: #4b4b4b;
     height: 100vh; /* Full height */
     padding: 10px 0;
     position: fixed;
     top: 0;
     left: 0;
-    }
+    font-family: Arial, Helvetica, sans-serif;
+    z-index: 1;
+ }
     
     .sidebar ul {
     list-style: none;
@@ -77,6 +96,7 @@ body {
     font-weight: bold;
     padding: 10px 20px;
     display: block;
+    
     }
     
     .sidebar ul li a:hover {
@@ -117,10 +137,10 @@ nav ul {
     margin-top: 10%;
     background: rgba(255, 255, 255, 0.38);
     border-radius: 16px;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.3);
     border-color: rgb(255, 255, 255);
 }
 

@@ -13,12 +13,7 @@
             <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         </head>
         <body>
-            <div class="head_images">
-                <img src="Images/court of arms.png" width="60px" height="60px" padding-right="5px">
-                <img src="Images/Mongu Council Logo.png" width="60px" height="60px">
-            </div>
-            
-			<nav class="sidebar">
+         		<nav class="sidebar">
                     <ul>
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
@@ -26,7 +21,7 @@
                         <li><a href="login.php">Employee LogIn</a></li>
                     </ul>
                 </nav>
-                <body><!--http://mrwallpapers.com/wp-content/uploads/2018/10/wall-leaves-wooden-background-images-hd.jpg-->
+                <body>
 <div>
 <div class="form" id="login">
 	<div class="box">
@@ -79,7 +74,7 @@
 	</div>
 	<form action="login.php" method="POST">
 		<input class="input" type="text" name="Username" placeholder="Username" required><br>
-		<input class="input" type="password" name="Password" placeholder="Password" required><br>
+		<input style="padding-top: 5px;" class="input" type="password" name="Password" placeholder="Password" required><br>
 		<input class="button" type="submit" name="login" value="LOGIN"><br>
 		<a id="oksignup">Sign Up here</a> | <a href="#">Forgot Password?</a>
 	</form>

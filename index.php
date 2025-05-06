@@ -22,7 +22,7 @@
         <body>
             <header>
                 <nav class="sidebar">
-                    <ul>
+                    <ul style="font-family: Arial, Helvetica, sans-serif;">
                         <li><a href="index.php">Home</a></li>
                         <li><a href="about.php">About</a></li>
                         <li><a href="payments.php">Payments</a></li>
@@ -34,10 +34,10 @@
             </div>
 
             <div class="pg_title">
-               
-                <h3 style="padding-top: 3px;">Your Local Authority at Your Convenience <br></h3>
+            
+                <h3 style="padding-top: 15px;">Your Local Authority at Your Convenience <br></h3>
                 <hr>
-                <p style="padding-right: 45%;padding-bottom: 3%;padding-top: 3%">
+                <p class="text" style="padding-bottom: 3%;padding-top: 3%">
                     The <strong>The Municipal Public Records System (MPRIS)</strong> is the the Municipal's records and archive system that enables the general public to search for public Records
                     for Mongu District. The system allows you to search through recorded <strong>death, births, marriages and pet (dog) registrations </strong>under
                     control of animals.

@@ -30,7 +30,7 @@ if (isset($_GET['search'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            padding-left: 8%;
+            padding-left: 2%;
         }
         .container {
             margin-top: 50px;
@@ -39,7 +39,7 @@ if (isset($_GET['search'])) {
             margin-top: 20px;
         }
         header {
-            background-image: url('Images/births_bg.jpg');
+            background-image: url('images/births_bg.jpg');
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: fixed;
@@ -54,16 +54,28 @@ if (isset($_GET['search'])) {
 </head>
 <body>
     <header>
-        <nav class="sidebar">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="payments.php">Payments</a></li>
-                <li><a href="login.php">Employee LogIn</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
+                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
+                    </li>
+                    </div>
+                </nav>
         </nav>
         <div class="title">
-            <h1 style="text-align: left; padding-left: 12%; margin-top: 10px;">Birth Records</h1>
+            <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Birth Records</h1>
         </div>
     </header>
     <div class="container">

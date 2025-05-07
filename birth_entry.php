@@ -82,6 +82,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
+
 <body style="background-color:rgb(234, 234, 234);">
     <div class="container">
         <h2 style="margin-left: 20%;">Enter Birth Records</h2>

@@ -6,6 +6,7 @@
             <title>Municipal Public Records</title>
             <link rel="icon" type="image" href="Images/court of arms.png">
             <link rel="stylesheet" href="css/local.css">
+            <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
             <style>
                 header {
                     background-image: url('Images/landing1.jpg');
@@ -21,31 +22,39 @@
         </head>
         <body>
             <header>
-                <nav class="sidebar">
-                    <ul style="font-family: Arial, Helvetica, sans-serif;">
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="payments.php">Payments</a></li>
-                        <li><a href="login.php">Employee LogIn</a></li>
-                    </ul>
-                </nav>
-            <div class="title">
-            <h1> Welcome To The Municipal Public Records System</h1>
-            </div>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
+                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <div class="pg_title">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
+                    </li>
+                    </div>
+                </nav>
+
+                <div class="title">
+                <h1> Welcome To The Municipal Public Records System</h1>
+                </div>
+
+                <div class="pg_title">
             
                 <h3 style="padding-top: 15px;">Your Local Authority at Your Convenience <br></h3>
                 <hr>
-                <p class="text" style="padding-bottom: 3%;padding-top: 3%">
-                    The <strong>The Municipal Public Records System (MPRIS)</strong> is the the Municipal's records and archive system that enables the general public to search for public Records
-                    for Mongu District. The system allows you to search through recorded <strong>death, births, marriages and pet (dog) registrations </strong>under
-                    control of animals.
-                </p>
+              
                 <hr>
                 <div class="options" style="border-radius: 40px; margin-top: 10px; padding-top: 8%;">
                     <h3> SELECT SERVICE</h3>
-                    <button class="button-3" role="button" onclick="location.href='marriages.php'">Marriage Records</button>
+                    <button class="button-3" role="button" onclick="location.href='marriage_display.php'">Marriage Records</button>
                     <button class="button-3" role="button" onclick="location.href='birth_display.php'"> Birth Records</button>
                     <button class="button-3" role="button" onclick="location.href='death_display.php'">Death Records</button>
                     <button class="button-3" role="button" onclick="location.href='dog registration.php'">Dog Registrations</button>

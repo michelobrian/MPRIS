@@ -68,7 +68,7 @@
     </header>
     <div class="container">
         <div style="margin-bottom: 20px;">
-            <a href="export_to_excel.php" class="btn btn-success">
+            <a href="export_to_excel_death.php" class="btn btn-success">
                 <i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel
             </a>
         </div>

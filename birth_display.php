@@ -75,7 +75,7 @@ if (isset($_GET['search'])) {
                 </nav>
         </nav>
         <div class="title">
-            <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Birth Records</h1>
+            <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Births</h1>
         </div>
     </header>
     <div class="container">

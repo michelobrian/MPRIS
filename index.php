@@ -48,11 +48,12 @@
 
                 <div class="pg_title">
             
-                <h3 style="padding-top: 15px;">Your Local Authority at Your Convenience <br></h3>
+                <h3 style="padding-top: 15px; font-weight: 900;">Your Local Authority at Your Convenience <br></h3>
                 <hr>
-              
+                <p style="padding-top: 15px; padding-left: 30px; font-weight: 700;">Access Public Records, Municipal Archives and Services Online</p>
+                <p> </p>
                 <hr>
-                <div class="options" style="border-radius: 40px; margin-top: 10px; padding-top: 8%;">
+                <div class="options" style="border-radius: 40px; margin-top: 90px; padding-top: 8%;">
                     <h3> SELECT SERVICE</h3>
                     <button class="button-3" role="button" onclick="location.href='marriage_display.php'">Marriage Records</button>
                     <button class="button-3" role="button" onclick="location.href='birth_display.php'"> Birth Records</button>

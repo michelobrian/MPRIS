@@ -74,7 +74,7 @@
                     </div>
                 </nav>
         <div class="title">
-            <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Death Records and Burial Permits</h1>
+            <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Deaths and Burial Permits</h1>
         </div>
     </header>
     <div class="container">

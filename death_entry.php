@@ -6,26 +6,8 @@ $db = "mpris_db";
 
 $connection = new mysqli($host, $user, $password, $db);
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name_of_deceased = $_POST["name_of_deceased"];
-    $name_of_informant = $_POST["name_of_informant"];
-    $sex = $_POST["sex"];
-    $age_of_deceased = $_POST["age_of_deceased"];
-    $date_of_death = $_POST["date_of_death"];
-    $cause_of_death = $_POST["cause_of_death"];
-    $place_of_death = $_POST["place_of_death"];
-    $burial_place = $_POST["burial_place"];
-    $amount_paid = $_POST["amount_paid"];
-    $receipt_number = $_POST["receipt_number"];
-
-    $sql = "INSERT INTO deaths (name_of_deceased, name_of_informant, sex, age_of_deceased, date_of_death, cause_of_death, place_of_death, burial_place, amount_paid, receipt_number)
-            VALUES ('$name_of_deceased', '$name_of_informant', '$sex', '$age_of_deceased', '$date_of_death', '$cause_of_death', '$place_of_death', '$burial_place', '$amount_paid', '$receipt_number')";
-
-    if ($connection->query($sql) === TRUE) {
-        echo "<div class='alert alert-success'>New record created successfully</div>";
-    } else {
-        echo "<div class='alert alert-danger'>Error: " . $connection->error . "</div>";
-    }
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
 }
 ?>
 
@@ -61,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body style="background-color:rgb(234, 234, 234);">
     <div class="container">
         <h2 style="margin-left: 20%;">Enter Death Records</h2>
-        <form method="POST" action="">
+        <form method="POST" action="" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="name_of_deceased">Name of Deceased:</label>
                 <input type="text" class="form-control" id="name_of_deceased" name="name_of_deceased" required>
@@ -105,8 +87,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="receipt_number">Receipt Number:</label>
                 <input type="text" class="form-control" id="receipt_number" name="receipt_number" required>
             </div>
+            <div class="form-group">
+                <label for="death_certificate_scan">Death Certificate Scan:</label>
+                <input type="file" class="form-control" id="death_certificate_scan" name="death_certificate_scan" required>
+            </div>
             <button type="submit" class="btn btn-primary" style="margin-left: 20%;">Submit</button>
         </form>
+        <div><button class="btn btn-primary" role="button" onclick="location.href='index.php'" style="margin-bottom: 20px;">Back Home</div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

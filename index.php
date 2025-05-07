@@ -47,7 +47,7 @@
                     <h3> SELECT SERVICE</h3>
                     <button class="button-3" role="button" onclick="location.href='marriages.php'">Marriage Records</button>
                     <button class="button-3" role="button" onclick="location.href='births.php'"> Birth Records</button>
-                    <button class="button-3" role="button" onclick="location.href='death records.php'">Death Records</button>
+                    <button class="button-3" role="button" onclick="location.href='death_display.php'">Death Records</button>
                     <button class="button-3" role="button" onclick="location.href='dog registration.php'">Dog Registrations</button>
                     <button class="button-3" role="button" onclick="location.href='land.php'"> Land Records</button>
                     <button class="button-3" role="button" onclick="location.href='fees and charges.php'">Fees and Charges</button>

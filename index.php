@@ -9,7 +9,7 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
             <style>
                 header {
-                    background-image: url('Images/landing1.jpg');
+                    background-image: url('images/bg_main.jpg');
                     background-size: cover;
                     background-repeat: no-repeat;
                     background-attachment: fixed;
@@ -48,13 +48,13 @@
 
                 <div class="pg_title">
             
-                <h3 style="padding-top: 15px; font-weight: 900;">Your Local Authority at Your Convenience <br></h3>
+                <h3 style="padding-top: 15px; font-weight: 900; color: white;">Your Local Authority at Your Convenience <br></h3>
                 <hr>
-                <p style="padding-top: 15px; padding-left: 30px; font-weight: 700;">Access Public Records, Municipal Archives and Services Online</p>
+                <p style="font-weight: 700; text-align: center; color: white; text-shadow: 2px;">Access Public Records, Municipal Archives and Services Online</p>
                 <p> </p>
                 <hr>
-                <div class="options" style="border-radius: 40px; margin-top: 90px; padding-top: 8%;">
-                    <h3> SELECT SERVICE</h3>
+                <div class="options" style="border-radius: 40px; margin-top: 15%; padding-top: 3%; padding-bottom: 5%;">
+                    <h3 style="color: white;"> SELECT SERVICE</h3>
                     <button class="button-3" role="button" onclick="location.href='marriage_display.php'">Marriage Records</button>
                     <button class="button-3" role="button" onclick="location.href='birth_display.php'"> Birth Records</button>
                     <button class="button-3" role="button" onclick="location.href='death_display.php'">Death Records</button>

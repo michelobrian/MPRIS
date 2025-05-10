@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $date_of_birth = $_POST["date_of_birth"];
     $sex = $_POST["sex"];
     $place_of_birth = $_POST["place_of_birth"];
-    $name_of_mother = $_POST["name_of_mother"]; // Corrected variable name
+    $name_of_mother = $_POST["name_of_mother"];
     $name_of_father = $_POST["name_of_father"];
     $birth_certificate_number = $_POST["birth_certificate_number"];
     $date_of_registration = $_POST["date_of_registration"];

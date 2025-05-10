@@ -1,6 +1,0 @@
-Details of owner.
-type of pet
-name of pet
-age
-Vaccination records
-important information and imunisations

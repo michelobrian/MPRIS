@@ -39,6 +39,9 @@
                     <li class="nav-item">
                     <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
                     </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="data_samples/Project Report.pdf" target="blank">Documentation</a>
+                    </li>
                     </div>
                 </nav>
 
@@ -58,10 +61,9 @@
                     <button class="button-3" role="button" onclick="location.href='marriage_display.php'">Marriage Records</button>
                     <button class="button-3" role="button" onclick="location.href='birth_display.php'"> Birth Records</button>
                     <button class="button-3" role="button" onclick="location.href='death_display.php'">Death Records</button>
-                    <button class="button-3" role="button" onclick="location.href='dog registration.php'">Dog Registrations</button>
-                    <button class="button-3" role="button" onclick="location.href='land.php'"> Land Records</button>
-                    <button class="button-3" role="button" onclick="location.href='fees and charges.php'">Fees and Charges</button>
-                </div>
+                    <button class="button-3" role="button" onclick="location.href='dog_display.php'">Dog Registrations</button>
+                    <button class="button-3" role="button" onclick="location.href='land_display.php'"> Land Records</button>
+                    </div>
             </div>
             </header>
         </body>

@@ -16,7 +16,7 @@
                 margin-right: -2%;
             }
             body {
-                background-image: url('Images/about.jpg');
+                background-image: url('images/about.jpg');
                 
             }
         </style>

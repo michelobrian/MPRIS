@@ -1,14 +1,5 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "mpris_db";
-
-$connection = new mysqli($host, $user, $password, $db);
-
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+include 'db_connect.php'; // Include the database connection file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name_of_child = $_POST["name_of_child"];

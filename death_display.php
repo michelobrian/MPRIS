@@ -1,23 +1,14 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "";
-    $db = "mpris_db";
+include 'db_connect.php'; // Include the database connection file
 
-    $connection = new mysqli($host, $user, $password, $db);
-
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
-    }
-
-    // Handle search query
-    $search_query = "";
-    if (isset($_GET['search'])) {
-        $search_query = $_GET['search'];
-        $result = $connection->query("SELECT * FROM deaths WHERE name_of_deceased LIKE '%$search_query%'");
-    } else {
-        $result = $connection->query("SELECT * FROM deaths");
-    }
+// Handle search query
+$search_query = "";
+if (isset($_GET['search'])) {
+    $search_query = $_GET['search'];
+    $result = $connection->query("SELECT * FROM deaths WHERE name_of_deceased LIKE '%$search_query%'");
+} else {
+    $result = $connection->query("SELECT * FROM deaths");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -54,25 +45,26 @@
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
-                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
+            <a class="navbar-brand" style="padding-left: 2%;" href="#">MPRIS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
+                        <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
                     </li>
-                    </div>
-                </nav>
+                </ul>
+            </div>
+        </nav>
         <div class="title">
             <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Deaths and Burial Permits</h1>
         </div>
@@ -137,11 +129,5 @@
         </table>
         <a href="death_entry.php" class="btn btn-primary">Add New Record</a>
     </div>
-    <!--
-    <footer style="background-color:rgb(6, 0, 0); color: white; padding: 10px; bottom: 0; width: 100%; position: fixed;" margin-left="-2%">
-        <p style="text-align: center;">&copy; 2023 Municipal Public Records System. All rights reserved.</p>
-        <p style="padding-left:30%;">Developed by: Brian Michelo <a href="https://github.com/michelobrian" target="_blank">GitHub</a></p>
-        <p style="padding-left:30%;">Contact: 0977 273121 <br> Email: michelobrian88@gmail.com</p>
-    </footer> -->
 </body>
 </html>

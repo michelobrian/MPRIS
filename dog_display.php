@@ -1,23 +1,14 @@
 <?php
-    $host = "localhost";
-    $user = "root";
-    $password = "";
-    $db = "mpris_db";
+include 'db_connect.php'; // Include the database connection file
 
-    $connection = new mysqli($host, $user, $password, $db);
-
-    if ($connection->connect_error) {
-        die("Connection failed: " . $connection->connect_error);
-    }
-
-    // Handle search query
-    $search_query = "";
-    if (isset($_GET['search'])) {
-        $search_query = $_GET['search'];
-        $result = $connection->query("SELECT * FROM dogs WHERE dog_name LIKE '%$search_query%' OR owner_name LIKE '%$search_query%'");
-    } else {
-        $result = $connection->query("SELECT * FROM dogs");
-    }
+// Handle search query
+$search_query = "";
+if (isset($_GET['search'])) {
+    $search_query = $_GET['search'];
+    $result = $connection->query("SELECT * FROM dogs WHERE dog_name LIKE '%$search_query%' OR owner_name LIKE '%$search_query%'");
+} else {
+    $result = $connection->query("SELECT * FROM dogs");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">

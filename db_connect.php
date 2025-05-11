@@ -2,16 +2,15 @@
 $host = "localhost";
 $user = "root";
 $password = "";
-$dbname = "mpris_db";
+$db = "mpris_db";
 
-// Create connection
-$conn = new mysqli($host, $user, $password, $dbname);
+// Create a connection
+$connection = new mysqli($host, $user, $password, $db);
 
-// Check connection
-if ($conn->connect_error) {
-    error_log("Connection failed: " . $conn->connect_error);
-    exit("Database connection error.");
+// Check the connection
+if ($connection->connect_error) {
+    die("Connection failed: " . $connection->connect_error);
 }
 
-$conn->close();
+
 ?>

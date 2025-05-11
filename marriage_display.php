@@ -1,14 +1,5 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "mpris_db";
-
-$connection = new mysqli($host, $user, $password, $db);
-
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+include 'db_connect.php'; // Include the database connection file
 
 // Handle search query
 $search_query = "";
@@ -54,37 +45,35 @@ if (isset($_GET['search'])) {
 </head>
 <body>
     <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
-                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
+            <a class="navbar-brand" style="padding-left: 2%;" href="#">MPRIS</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
+                        <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="_blank">GitHub</a>
                     </li>
-                    </div>
-                </nav>
-        
+                </ul>
+            </div>
+        </nav>
         <div class="title">
             <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Marriage Records</h1>
         </div>
     </header>
-    
     <div class="container">
         <div style="margin-bottom: 20px;">
             <a href="export_to_excel_marriage.php" class="btn btn-success">
                 <i class="fa fa-file-excel-o" aria-hidden="true"></i> Export to Excel
             </a>
-
         </div>
         <h2>Marriage Records</h2>
         <!-- Search Form -->
@@ -134,6 +123,5 @@ if (isset($_GET['search'])) {
         </table>
         <a href="marriage_entry.php" class="btn btn-primary">Add New Record</a>
     </div>
-   
 </body>
 </html>

@@ -1,14 +1,5 @@
 <?php
-$host = "localhost";
-$user = "root";
-$password = "";
-$db = "mpris_db";
-
-$connection = new mysqli($host, $user, $password, $db);
-
-if ($connection->connect_error) {
-    die("Connection failed: " . $connection->connect_error);
-}
+include 'db_connect.php'; // Include the database connection file
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name_of_groom = $_POST["name_of_groom"];
@@ -26,7 +17,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $file_type = strtolower(pathinfo($marriage_certificate_scan, PATHINFO_EXTENSION));
 
     // Check if file is a valid image or PDF
-    if ($file_type != "jpg" && $file_type != "jpeg" && $file_type != "png" && $file_type != "pdf") {
+    $allowed_types = ['jpg', 'jpeg', 'png', 'pdf'];
+    if (!in_array($file_type, $allowed_types)) {
         echo "<div class='alert alert-danger'>Only JPG, JPEG, PNG, and PDF files are allowed.</div>";
         $upload_ok = 0;
     }

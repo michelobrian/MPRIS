@@ -36,24 +36,21 @@
                     <li class="nav-item active">
                     <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank">GitHub</a>
                     </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="data_samples/Project Report.pdf" target="blank">Documentation</a>
+                    <li style="padding-right: 5px; padding-left: 400%;">
+                    <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
+                    </li>
+                    <li>
+                    <a href="logout.php" class="btn btn-danger" style="float:right;">Logout</a>
                     </li>
                     </div>
                 </nav>
 
-                <div class="title">
-                <h1> Welcome To The Municipal Public Records System</h1>
                 </div>
-
                 <div class="pg_title">
-            
                 <h3 style="padding-top: 15px; font-weight: 900; color: white;">Your Local Authority at Your Convenience <br></h3>
                 <hr>
-                <p style="font-weight: 700; text-align: center; color: white; text-shadow: 2px;">Access Public Records, Municipal Archives and Services Online</p>
+                <p style="font-weight: 700; text-align: center; color: white; text-shadow: 2px;">Access Public Records & Archive Services Online</p>
                 <p> </p>
                 <hr>
                 <div class="options" style="border-radius: 40px; margin-top: 15%; padding-top: 3%; padding-bottom: 5%;">
@@ -69,7 +66,8 @@
         </body>
 
         <footer style="background-color:rgb(6, 0, 0); color: white;  padding: 10px; bottom: 0; width: 100%;">
-            <p style="text-align: center;">&copy; 2023 Municipal Public Records System. All rights reserved.</p>
-            <p style="padding-left:30%;">Developed by:  Brian Michelo    <a href="https://github.com/michelobrian" target="_blank">GitHub</a></p>
-            <p style="padding-left:30%;">Contact:  0977 273121  <br> Email: michelobrian88@gmail.com</p>
+            <p style="text-align: center; font-size: smaller;">&copy; 2025 Municipal Public Records System. All rights reserved. <br> Developed and Designed by:  Brian Michelo</p>
+            <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank" style="text-align: center; font-size: smaller;">GitHub</a>
+            <a class="nav-link" href="data_samples/Project Report.pdf" target="blank" style="text-align: center; font-size: smaller;">Documentation</a>
+                
     </html>

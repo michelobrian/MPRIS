@@ -1,5 +1,16 @@
 <?php
 include 'db_connect.php'; // Include the database connection file
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: login.php");
+    exit();
+}
+
+// Show welcome message if session started
+$user_id = $_SESSION['user_id'];
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id; 
+echo "<div class='alert alert-info'>You are logged in as $username</div>";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name_of_child = $_POST["name_of_child"];

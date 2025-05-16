@@ -1,141 +1,93 @@
-<DOCTYPE ! html>
-    <html lang="en">
-        <head>
-            <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Municipal Public Records</title>
-            <link rel="icon" type="image" href="Images/Mongu Council Logo.png">
-            <link rel="stylesheet" href="css/local.css">
-                    
-            <link rel="stylesheet" type="text/css" href="css/Login.css">
-            <link rel = "icon" href = "jagran_logo1.jpg" type = "image/x-icon">
-            <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
-            <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        </head>
-        <body>
-         		<nav class="sidebar">
-                    <ul>
-                        <li><a href="index.php">Home</a></li>
-                        <li><a href="about.php">About</a></li>
-                        <li><a href="payments.php">Payments</a></li>
-                        <li><a href="login.php">Employee LogIn</a></li>
-                    </ul>
+<?php
+session_start();
+include "db_connect.php"; // This must connection to your MySQL database and set $connection
+
+$error = "";
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    $username = $connection->real_escape_string($_POST['username']);
+    $password = $_POST['password'];
+
+    // Query the users table for the submitted username
+    $sql = "SELECT * FROM users WHERE username = '$username' LIMIT 1";
+    $result = $connection->query($sql);
+
+    if ($result && $result->num_rows === 1) {
+        $user = $result->fetch_assoc();
+        // Verify the submitted password against the hashed password in the database
+        if (password_verify($password, $user['password'])) {
+            $_SESSION['user_id'] = $user['id'];
+            $_SESSION['username'] = $user['username'];
+            header("Location: index.php");
+            exit();
+        } else {
+            $error = "Invalid username or password.";
+        }
+    } else {
+        $error = "Invalid username or password.";
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login - Maintenance System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('images/login_bg.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            min-height: 100vh;
+        }
+    </style>
+</head>
+<header>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
+                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                    </li>
+                    </li>
+                    </div>
                 </nav>
-                <body>
-<div>
-<div class="form" id="login">
-	<div class="box">
-	<h3>LOGIN</h3>
-	<div class="social-container">
-		<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-		<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-		<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-	</div>
-	<div>
-		<?php
-			function test_input($data)
-			{
-				$data=trim($data);
-				$data=stripcslashes($data);
-				$data=htmlspecialchars($data);
-				return $data;
-			}
-			if(isset($_POST['login']))
-			{
-				session_start();
-				$username=$password="";
-				if($_SERVER["REQUEST_METHOD"] == "POST")
-				{
-					$username = test_input($_POST['Username']);
-					$password = test_input($_POST['Password']);
-					//echo $username,"<br>";
-					//echo $password;
-
-					$link = mysqli_connect("localhost", "root", "");
-					if (mysqli_connect_errno()) {
-    					printf("Connect failed: %s\n", mysqli_connect_error());
-    					exit();
-					}
-					mysqli_select_db($link,"mpris_db");
-					$results=mysqli_query($link,"select * from users where Username='$Username' and Password='$password'") or die("failed to connect".mysqli_connect_error());
-					$row=mysqli_fetch_array($results);
-					if ($row['Username'] == $username && $row['Password'] == $Password) {
-						header("location: http://localhost/project/home.php");
-						$_SESSION['username'] = $username;
-						$_SESSION['mes'] = "true";
-					} 
-					else {
-					echo "Login failed";
-					}
-					mysqli_close($link);
-				}
-			} 
-		?>	
-	</div>
-	<form action="login.php" method="POST">
-		<input class="input" type="text" name="Username" placeholder="Username" required><br>
-		<input style="padding-top: 5px;" class="input" type="password" name="Password" placeholder="Password" required><br>
-		<input class="button" type="submit" name="login" value="LOGIN"><br>
-		<a id="oksignup">Sign Up here</a> | <a href="#">Forgot Password?</a>
-	</form>
+</header>
+<body class="bg-light">
+    <div class="container mt-5" >
+        <div class="row justify-content-center" >
+            <div class="col-md-5">
+                <div class="card shadow p-4">
+                    <h3 class="mb-4 text-center">MPRIS Employees LogIn</h3>
+                    <?php if ($error): ?>
+                        <div class="alert alert-danger text-center"><?php echo $error; ?></div>
+                    <?php endif; ?>
+                    <form method="POST" action="">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username:</label>
+                            <input type="text" name="username" id="username" class="form-control" required autofocus>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password:</label>
+                            <input type="password" name="password" id="password" class="form-control" required>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" class="btn btn-primary btn-sm" style="max-width: 200px;">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-<div class="form reg" id="signup">
-	<div class="box">
-	<h3>SIGN UP</h3>
-	<div class="social-container">
-		<a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-		<a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-		<a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-	</div>
-	<?php
-		if(isset($_POST['signup']))
-		{
-			$usernameSub=$password1=$password2="";
-			if($_SERVER["REQUEST_METHOD"] == "POST")
-			{
-				$usernameSub = test_input($_POST['Username']);
-				$password1 = test_input($_POST['Password']);
-				$password2 = test_input($_POST['ConfirmPassword']);
-
-				$link = mysqli_connect("localhost", "root", "");
-				if (mysqli_connect_errno()) {
-    				printf("Connect failed: %s\n", mysqli_connect_error());
-    				exit();
-				}
-				if(empty($usernameSub))
-					array_push($error, "Please fill username");
-				if(empty($password1))
-					array_push($error, "Please fill password");
-				if(empty($password2))
-					array_push($error, "Please fill confirm password");
-				if($password1 != $password2)
-					echo "Password's don't match";
-				else if($password1 == $password2)
-				{
-					mysqli_select_db($link,"test_db");
-					$results=mysqli_query($link,"insert into usertable(Username,Password) values('$usernameSub','$password1')") or die("failed to connect".mysqli_connect_error());
-					header('localhost: http://localhost/project/login.php');
-					echo "Data Stored" ;
-				}
-				mysqli_close($link);
-			}
-		}
-	?>
-	<form action="login.php" method="POST">
-		<input class="input" type="text" name="Username" placeholder="Username" required><br>
-		<input class="input" type="password" name="Password" placeholder="Password" required><br>
-		<input class="input" type="password" name="ConfirmPassword" placeholder="Confirm Password" required><br>
-		<input class="button" type="submit" name="signup" value="SIGN UP"><br>
-		<a id="oklogin">Login Here</a>
-	</form>
-    </div>
-</div>
-</div>
- <script
-  src="http://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-<script type="text/javascript" src="Login.js"></script>
 </body>
 </html>

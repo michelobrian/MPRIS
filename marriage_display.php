@@ -45,26 +45,30 @@ if (isset($_GET['search'])) {
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 0%; padding-right: 3%; margin-bottom: 10px;">
-            <a class="navbar-brand" style="padding-left: 2%;" href="#">MPRIS</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+                <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
+                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                        <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="_blank">GitHub</a>
                     </li>
-                </ul>
-            </div>
-        </nav>
+                    <li style="padding-right: 5px; padding-left: 400%;">
+                    <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
+                    </li>
+                    <li>
+                    <a href="logout.php" class="btn btn-danger" style="float:right;">Logout</a>
+                    </li>
+                    </div>
+                </nav>
+                
         <div class="title">
             <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Marriage Records</h1>
         </div>

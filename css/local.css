@@ -1,5 +1,5 @@
 body {
-    background-image: url('CSS/bg_img1.jpg');
+    background-image: url('images/bg_2.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -142,7 +142,7 @@ nav ul {
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(3.4px);
     -webkit-backdrop-filter: blur(3.4px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.551);
     border-color: rgba(255, 255, 255, 0.363);
 }
 

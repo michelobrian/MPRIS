@@ -62,6 +62,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         body {
             padding-left: 0%;
+            background-image: url('images/about.jpg');
+            background-size: cover;
+             background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
         }
         .container {
             margin-top: 50px;
@@ -111,10 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $user_id = $_SESSION['user_id'];
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id; 
 echo "<div class='alert alert-info'>You are logged in as $username</div>";
-    ?>
+?>
 </div>
 
-<body style="background-color:rgb(234, 234, 234);">
+<body>
     <div class="container">
         <h2 style="margin-left: 20%;">Enter Birth Records</h2>
         <form method="POST" action="" enctype="multipart/form-data">
@@ -169,9 +174,8 @@ echo "<div class='alert alert-info'>You are logged in as $username</div>";
                 <label for="birth_certificate_scan">Birth Certificate Scan:</label>
                 <input type="file" class="form-control" id="birth_certificate_scan" name="birth_certificate_scan" required>
             </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 20%;">Submit</button>
+            <button type="submit" class="btn btn-primary" style="margin-left: 20%; margin-bottom: 5%;">Submit</button>
         </form>
-       
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

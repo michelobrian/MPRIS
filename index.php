@@ -40,7 +40,7 @@
                     <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
                     </li>
                     </li>
-                    <li style="padding-right: 5px; padding-left: 250%;">
+                    <li style="padding-right: 5px; padding-left: 275%;">
                     <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
                     </li>
                     <li>

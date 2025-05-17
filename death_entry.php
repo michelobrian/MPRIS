@@ -60,6 +60,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <style>
         body {
             padding-left: 0%;
+            background-image: url('images/about.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
         }
         .container {
             margin-top: 50px;
@@ -112,7 +117,7 @@ echo "<div class='alert alert-info'>You are logged in as $username</div>";
     ?>
 </div>
 
-<body style="background-color:rgb(234, 234, 234);">
+<body>
     <div class="container">
         <h2 style="margin-left: 20%;">Enter Death Records</h2>
         <form method="POST" action="" enctype="multipart/form-data">

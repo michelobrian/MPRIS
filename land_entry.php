@@ -7,10 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
-// Show welcome message if session started
-$user_id = $_SESSION['user_id'];
-$username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id; 
-echo "<div class='alert alert-info'>You are logged in as $username</div>";
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $plot_no = $_POST["plot_no"];
@@ -63,7 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            padding-left: 8%;
+            padding-left: 0%;
+             background-image: url('images/about.jpg');
+            background-size: cover;
+             background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100vh;
         }
         .container {
             margin-top: 50px;
@@ -83,7 +85,39 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     </style>
 </head>
-<body style="background-color:rgb(234, 234, 234);">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
+                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="about.php"><span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
+                    </li>
+                    </li>
+                    <li style="padding-right: 5px; padding-left: 400%;">
+                    <a href="logout.php" class="btn btn-danger" style="float:right;">Logout</a>
+                    </li>
+                    </div>
+                </nav>
+</header>
+<div>
+    <?php
+    // Show welcome message if session started
+$user_id = $_SESSION['user_id'];
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id; 
+echo "<div class='alert alert-info'>You are logged in as $username</div>";
+?>
+</div>
+<body>
     <div class="container">
         <h2 style="margin-left: 20%;">Enter Land Records</h2>
         <form method="POST" action="" enctype="multipart/form-data">
@@ -115,9 +149,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label for="ministry_documents">Upload Ministry Documents:</label>
                 <input type="file" class="form-control" id="ministry_documents" name="ministry_documents" required>
             </div>
-            <button type="submit" class="btn btn-primary" style="margin-left: 20%;">Submit</button>
+            <button type="submit" class="btn btn-primary" style="margin-left: 20%; margin-bottom: 5%;">Submit</button>
         </form>
-        <div><button class="btn btn-primary" role="button" onclick="location.href='index.php'" style="margin-bottom: 20px;">Back Home</button></div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>

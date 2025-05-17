@@ -57,10 +57,10 @@ if (isset($_GET['search'])) {
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item active">
-                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="dashboard.php">Dashboard<span class="sr-only">(current)</span></a>
                     </li>
                     </li>
-                    <li style="padding-right: 5px; padding-left: 400%;">
+                    <li style="padding-right: 5px; padding-left: 350%;">
                     <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
                     </li>
                     <li>

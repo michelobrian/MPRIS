@@ -131,7 +131,7 @@ if (isset($_GET['search'])) {
                 ?>
             </tbody>
         </table>
-        <a href="death_entry.php" class="btn btn-primary">Add New Record</a>
+        
     </div>
 </body>
 </html>

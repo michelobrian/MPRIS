@@ -45,7 +45,7 @@ if (isset($_GET['search'])) {
 </head>
 <body>
     <header>
-              <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
                     <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@ if (isset($_GET['search'])) {
                     </li>
                     </div>
                 </nav>
-                
+
         <div class="title">
             <h1 style="text-align: left; padding-left: 5%; margin-top: 10px;">Dog Registration Records</h1>
         </div>
@@ -123,7 +123,6 @@ if (isset($_GET['search'])) {
                 ?>
             </tbody>
         </table>
-        <a href="dog_entry.php" class="btn btn-primary">Add New Record</a>
     </div>
 </body>
 </html>

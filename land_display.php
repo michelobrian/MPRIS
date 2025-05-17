@@ -127,7 +127,6 @@ if (isset($_GET['search'])) {
                 ?>
             </tbody>
         </table>
-        <a href="land_entry.php" class="btn btn-primary">Add New Record</a>
     </div>
 </body>
 </html>

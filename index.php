@@ -16,8 +16,8 @@
                     min-height: 900px;
                     margin-left: -2%;
                     margin-right: -2%;
-                
                 }
+                
             </style>
         </head>
         <body>
@@ -36,8 +36,11 @@
                     <li class="nav-item active">
                     <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
                     </li>
+                    <li class="nav-item active">
+                    <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
                     </li>
-                    <li style="padding-right: 5px; padding-left: 400%;">
+                    </li>
+                    <li style="padding-right: 5px; padding-left: 250%;">
                     <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
                     </li>
                     <li>

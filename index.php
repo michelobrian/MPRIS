@@ -70,7 +70,10 @@
 
         <footer style="background-color:rgb(6, 0, 0); color: white;  padding: 10px; bottom: 0; width: 100%;">
             <p style="text-align: center; font-size: smaller;">&copy; 2025 Municipal Public Records System. All rights reserved. <br> Developed and Designed by:  Brian Michelo</p>
+            <div style="text-align: center; font-size: smaller; font-family: Arial, Helvetica, sans-serif;">
+                <p>Email: michelobrian88@gmail.com <br> Contact Number: +260 977273121</p>
+            </div>
             <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank" style="text-align: center; font-size: smaller;">GitHub</a>
-            <a class="nav-link" href="data_samples/Project Report.pdf" target="blank" style="text-align: center; font-size: smaller;">Documentation</a>
+            <a class="nav-link" href="data_samples/Project Report.pdf" target="blank" style="text-align: center; font-size: smaller; padding-top:-2px">Documentation</a>
                 
     </html>

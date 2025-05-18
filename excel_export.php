@@ -1,6 +1,15 @@
 <?php
+/*
+ * This script exports all records from the main tables (births, deaths, marriages, dogs, and land_records)
+ * in tab-separated format as a single Excel file download.
+ * It sets the appropriate headers for Excel, queries each table, and outputs the data with column headers.
+ * Each section is separated by a blank line and a header row for clarity in Excel.
+ * Usage: Access this file via browser to download all records as an Excel (.xls) file.
+ */
+
 include 'db_connect.php'; // Include the database connection file
 
+//
 // Set headers to force download as an Excel file
 header("Content-Type: application/vnd.ms-excel");
 header("Content-Disposition: attachment; filename=records_export.xls");

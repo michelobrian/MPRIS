@@ -29,23 +29,28 @@
                     </button>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                    <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                    <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                    <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
-                    </li>
-                    </li>
-                    <li style="padding-right: 5px; padding-left: 275%;">
-                    <a href="login.php" class="btn btn-success" style="float:right;">Login</a>
-                    </li>
-                    <li>
-                    <a href="logout.php" class="btn btn-danger" style="float:right;">Logout</a>
-                    </li>
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="about.php">About <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
+                            </li>
+                        </ul>
+                        <?php
+                            session_start();
+                            if (isset($_SESSION['user_id'])) {
+                                $user_id = $_SESSION['user_id'];
+                                $username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id;
+                                echo "<span class='navbar-text mr-3'>Logged in as <strong>$username</strong></span>";
+                                echo '<a href="logout.php" class="btn btn-danger ml-2">Logout</a>';
+                            } else {
+                                echo '<a href="login.php" class="btn btn-success ml-2">Login</a>';
+                            }
+                        ?>
                     </div>
                 </nav>
 

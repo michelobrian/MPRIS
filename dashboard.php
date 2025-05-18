@@ -54,33 +54,31 @@ $lands = $connection->query("SELECT COUNT(*) as count FROM land_records")->fetch
     </style>
 </head>
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="padding-left: 3%; padding-right: 3%; margin-bottom: 10px;">
-                    <a class="navbar-brand" style="padding-left: 2%;"  href="#">MPRIS</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+        <a class="navbar-brand" style="padding-left: 2%;" href="#">MPRIS</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
                     <a class="nav-link" href="index.php">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="about.php"><span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
+                </li>
+                <li class="nav-item active">
                     <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
-                    </li>
-                    </li>
-                    <li style="padding-right: 5px; padding-left: 400%;">
-                    <a href="logout.php" class="btn btn-danger" style="float:right;">Logout</a>
-                    </li>
-                    </div>
-                </nav>
-    <?php
-    $user_id = $_SESSION['user_id'];
-    $username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id; 
-    echo "<div class='alert alert-info'>You are logged in as $username</div>";
-    ?>
+                </li>
+            </ul>
+            <?php
+                $user_id = $_SESSION['user_id'];
+                $username = isset($_SESSION['username']) ? $_SESSION['username'] : $user_id;
+                echo "<span class='navbar-text mr-3'>Logged in as <strong>$username</strong></span>";
+            ?>
+            <a href="logout.php" class="btn btn-danger ml-2">Logout</a>
+        </div>
+    </nav>
     <div class="container">
         <h2 class="dashboard-title" style="color: white;">Dashboard - Public Records Statistics</h2>
         <div class="row">
@@ -122,7 +120,7 @@ $lands = $connection->query("SELECT COUNT(*) as count FROM land_records")->fetch
         </div>
         <div class="text-center" style="margin-top:30px; margin-bottom: 5%;">
             <a href="index.php" class="btn btn-secondary">Back to Home</a>
-            <a href="logout.php" class="btn btn-danger">Logout</a>
+            
         </div>
     </div>
 </body>

@@ -80,5 +80,5 @@
             </div>
             <a class="nav-link" href="https://github.com/michelobrian/MPRIS" target="blank" style="text-align: center; font-size: smaller;">GitHub</a>
             <a class="nav-link" href="data_samples/Project Report.pdf" target="blank" style="text-align: center; font-size: smaller; padding-top:-2px">Documentation</a>
-                
+        </footer>
     </html>
